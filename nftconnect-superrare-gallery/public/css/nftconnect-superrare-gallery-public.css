@@ -284,3 +284,7 @@ audio, canvas, progress, video {
 img.md-avatar-img {
     background: white;
 }
+hr.collectible-card__user-section-divider {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
