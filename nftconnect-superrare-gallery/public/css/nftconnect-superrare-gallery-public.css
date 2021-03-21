@@ -2,3 +2,285 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+.new-grid-img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%!important;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+.new-grid-img video {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.md-media embed, .md-media iframe, .md-media img, .md-media object, .md-media svg, .md-media video {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+@media screen and (min-width: 1025px)
+.new-grid-img video {
+    padding: 1px;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+@media screen and (min-width: 1025px)
+.new-grid-img {
+    padding: 0;
+}
+.artwork-thumbnail__container {
+    height: 100%;
+}
+
+.md-media {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.md-media--1-1 {
+    padding-bottom: 100% !important;
+}
+.collectible-card {
+    margin-bottom: 48px;
+   padding-left: 24px !important;
+    padding-right: 24px !important;
+	    float: left;
+}
+.collectible-card__info-container {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 14px 16px 16px;
+    min-height: 120px;
+}
+.collectible-card__first-section {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 95%;
+}
+@media screen and (min-width: 1025px)
+.collectible-card__name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-top: 0;
+}
+.collectible-card__name {
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 0;
+    line-height: 1.2;
+    color: #000;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.collectible-card__price-item-container {
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 8px;
+}
+.collectible-card__price-item {
+    width: 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.collectible-card__price-number {
+    font-size: 18px;
+    margin-bottom: 0;
+    word-wrap: break-word;
+    color: #2d8e69;
+}
+.collectible-card__price-text {
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    color: #005c3a;
+}
+.collectible-card__user-section {
+    min-height: 68px;
+}
+.collectible-card__user-section-divider {
+    border-color: #000;
+}
+.collectible-card__user-container {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 51px;
+}
+.collectible-card__user-item {
+    width: 50%;
+}
+.collectible-card__user-title {
+    margin-left: 32px;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+.user {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 34px;
+}
+.fVjqHL {
+    position: relative;
+    width: fit-content;
+    transition: height 100ms ease-in 0s, width 100ms ease-in 0s;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.cLhSFX {
+    position: absolute;
+    bottom: 10px;
+    height: 100%;
+    min-width: 40px;
+    width: 100%;
+}
+.hvJMgY {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.fqEnxh {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 14px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 10;
+    margin-bottom: auto;
+}
+.fVjqHL:not(:hover) > .sc-AxheI > div > * {
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+    display: none;
+}
+.fqEnxh > div {
+    transition: all 0ms ease-in 200ms;
+    visibility: visible;
+}
+.XnUHu {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0.5rem 0px;
+}
+.hLNlSr {
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0.5rem 0px;
+}
+.hXQgjp {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 14px;
+    margin-top: 4px;
+    margin-left: -4px;
+}
+.cCYVQg {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+}
+.ecwxqZ {
+    margin-bottom: 0px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+  
+}
+.imlulO {
+    margin-bottom: 0px;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+   
+}
+.md-avatar-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.md-avatar {
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 50%;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    width: 40px;
+}
+.user__avatar {
+    width: 24px;
+    height: 24px;
+}
+.md-avatar {
+    border: none;
+}
+.md-avatar--default {
+    background: #ffffff;
+    color: #f5f5f5;
+}
+.user__username {
+    color: #000;
+    font-size: 16px;
+    display: block;
+    margin-top: -4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 105px;
+}
+.user__username, .user__username:hover {
+    text-decoration: none;
+}
+.gmtmqV {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-left: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 75%;
+    position: relative;
+    z-index: 1;
+}
+img.md-avatar-img {
+    background: white;
+}
