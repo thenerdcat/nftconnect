@@ -63,13 +63,17 @@ register_deactivation_hook( __FILE__, 'deactivate_nftconnect_superrare_gallery' 
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-nftconnect-superrare-gallery.php';
- function nftconnect_superrare_gallery($atts) {
+ function nftconnect_superrare_gallery($atts, $content = null) {
 	 //$defaults = ['username'=>'bananakin'];
 	 $a = shortcode_atts( array(
-        'username' => 'bananakin',
+        'username' => '',
 		 'url' => ''
     ), $atts );
-	 $urltokenid = substr($a['url'], strrpos($a['url'], '-' )+1)."\n";
+	 if(!empty($a['url'])){
+	 $urltokenid = substr($a['url'], strrpos($a['url'], '-' )+1)."\n";}
+	  if(!empty($content)){
+	 $urltokenid = substr($content, strrpos($content, '-' )+1)."\n";}
+	// print_r($urltokenid);
 	 $urluser = "https://superrare.co/api/v2/user?username=".$a['username']; 
 	// print_r($urltokenid);
 	 $urlcreations = "https://superrare.co/api/v2/nft/get-by-market-details";
@@ -134,7 +138,7 @@ $options = [
 	
 	  $count = 0;
 	 //print_r($urltokenid);
-	 if(!empty($a['url'])){
+	 if(!empty($a['url']) || !empty($content)){
 		 foreach($resultscreations as $resultc){
 			
 			 while($count < $resultc->totalCount ){
