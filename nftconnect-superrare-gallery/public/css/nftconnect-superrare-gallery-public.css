@@ -288,3 +288,6 @@ hr.collectible-card__user-section-divider {
     margin-top: 15px !important;
     margin-bottom: 15px !important;
 }
+.collectible-card.col-sm-6.col-md-4 {
+    width: 33.333333%;
+}

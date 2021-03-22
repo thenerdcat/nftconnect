@@ -14,7 +14,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       NFTConnect
- * Plugin URI:        www.thenerdcat.com
+ * Plugin URI:        www.thenerdcat.com/nftconnect
  * Description:       Simple SuperRare NFT Gallery plugin for Wordpress.
  * Version:           1.0.0
  * Author:            Fernando Torres

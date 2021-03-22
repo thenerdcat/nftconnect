@@ -1,12 +1,31 @@
 === Plugin Name ===
-NFTConnect
+Contributors: Fernando Torres
+Donate link: https://thenerdcat.com/
+Tags: nft,superrare
+Requires at least: 4.7
+Tested up to: 5.4
+Stable tag: 4.3
+Requires PHP: 7.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+This tool will make sharing NFT’s from SuperRare easier to bloggers and news companies using WordPress, and at the same time will serve as a growth hacking tool for building backlinks for SuperRare.
 
 == Description ==
 
 This tool will make sharing NFT’s from SuperRare easier to bloggers and news companies using WordPress, and at the same time will serve as a growth hacking tool for building backlinks for SuperRare.
 
-== Installation ==
+You can check more details at thenerdcat.com/nftconnect
 
-Download the files, install and activate the plugin in Wordpress
+== Frequently Asked Questions ==
 
-Check more information and a Live Demo at https://thenerdcat.com/nftconnect
+
+== Screenshots ==
+
+
+
+== Changelog ==
+
+= 1.0 =
+
+== A brief Markdown ==
