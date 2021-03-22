@@ -1,7 +1,9 @@
 /**
  * All of the CSS for your public-facing functionality should be
- * included in this file.
+ * included in this file. 
  */
+
+
 *, :after, :before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -9,6 +11,11 @@
     -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
+
+a{
+    text-decoration: none;
+}
+
 .new-grid-img {
     -o-object-fit: cover;
     object-fit: cover;
@@ -57,12 +64,15 @@ audio, canvas, progress, video {
     padding-bottom: 100% !important;
 }
 .collectible-card {
+    width: 100%;
     margin-bottom: 48px;
-   padding-left: 24px !important;
+    padding-left: 24px !important;
     padding-right: 24px !important;
-	    float: left;
+	margin: 0 auto;
 }
 .collectible-card__info-container {
+    display: flex;
+    flex-direction: column;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
@@ -70,13 +80,14 @@ audio, canvas, progress, video {
     min-height: 120px;
 }
 .collectible-card__first-section {
-    display: -ms-flexbox;
     display: flex;
+    display: -ms-flexbox;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 95%;
+    margin-bottom: 15px;
 }
 @media screen and (min-width: 1025px)
 .collectible-card__name {
@@ -102,6 +113,8 @@ audio, canvas, progress, video {
     padding-top: 8px;
 }
 .collectible-card__price-item {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -128,15 +141,24 @@ audio, canvas, progress, video {
     border-color: #000;
 }
 .collectible-card__user-container {
-    display: -ms-flexbox;
+    border-top: 1px solid #000;
+    padding-top: 15px;
     display: flex;
+    justify-content: space-around;
+    display: -ms-flexbox;
     min-height: 51px;
+
 }
+
 .collectible-card__user-item {
+    display: grid;
     width: 50%;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 .collectible-card__user-title {
-    margin-left: 32px;
+    grid-column-start: 2;
+    margin: 0;
     font-size: 12px;
     color: #9b9b9b;
 }
@@ -147,7 +169,7 @@ audio, canvas, progress, video {
     align-items: center;
     min-height: 34px;
 }
-.fVjqHL {
+.user-container {
     position: relative;
     width: fit-content;
     transition: height 100ms ease-in 0s, width 100ms ease-in 0s;
@@ -155,14 +177,8 @@ audio, canvas, progress, video {
     -webkit-box-align: center;
     align-items: center;
 }
-.cLhSFX {
-    position: absolute;
-    bottom: 10px;
-    height: 100%;
-    min-width: 40px;
-    width: 100%;
-}
-.hvJMgY {
+
+.avatar-container {
     display: block;
     position: relative;
     z-index: 1;
@@ -247,6 +263,8 @@ audio, canvas, progress, video {
     width: 40px;
 }
 .user__avatar {
+    display: flex;
+    align-items: center;
     width: 24px;
     height: 24px;
 }
@@ -284,7 +302,25 @@ audio, canvas, progress, video {
 img.md-avatar-img {
     background: white;
 }
-hr.collectible-card__user-section-divider {
-    margin-top: 15px !important;
-    margin-bottom: 15px !important;
+
+.collectible-card__user-avatar {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+.collectible-card__user-username {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+@media screen (min-width: 768px){
+    .collectible-card{
+        width: 50%;
+    }
+}
+
+@media screen (max-width: 991px){
+    .collectible-card{
+        width: 33.3333333333333%;
+    }
 }
