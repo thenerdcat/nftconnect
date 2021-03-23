@@ -183,71 +183,8 @@ audio, canvas, progress, video {
     position: relative;
     z-index: 1;
 }
-.fqEnxh {
-    width: 0px;
-    height: 0px;
-    opacity: 0;
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgb(0 0 0 / 16%) 0px 4px 14px 0px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    z-index: 10;
-    margin-bottom: auto;
-}
-.fVjqHL:not(:hover) > .sc-AxheI > div > * {
-    height: 0px;
-    width: 0px;
-    visibility: hidden;
-    display: none;
-}
-.fqEnxh > div {
-    transition: all 0ms ease-in 200ms;
-    visibility: visible;
-}
-.XnUHu {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 0.5rem 0px;
-}
-.hLNlSr {
-    display: flex;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 0.5rem 0px;
-}
-.hXQgjp {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 14px;
-    margin-top: 4px;
-    margin-left: -4px;
-}
-.cCYVQg {
-    display: flex;
-    flex-direction: column;
-    width: 38%;
-}
-.ecwxqZ {
-    margin-bottom: 0px;
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-  
-}
-.imlulO {
-    margin-bottom: 0px;
-    color: rgba(0, 0, 0, 0.3);
-    font-size: 14px;
-   
-}
+
+
 .md-avatar-img {
     width: 100%;
     height: 100% !important;
