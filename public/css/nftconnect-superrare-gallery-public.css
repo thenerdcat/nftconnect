@@ -16,59 +16,23 @@ a{
     text-decoration: none;
 }
 
-.new-grid-img {
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%!important;
-    border-top: 1px solid #000;
-    border-right: 1px solid #000;
-    border-left: 1px solid #000;
-}
-.new-grid-img video {
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-.md-media embed, .md-media iframe, .md-media img, .md-media object, .md-media svg, .md-media video {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+/* 
+    Main Containers
+*/
+
+.collectible-collection{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-}
-@media screen and (min-width: 1025px)
-.new-grid-img video {
-    padding: 1px;
-}
-audio, canvas, progress, video {
-    display: inline-block;
-    vertical-align: baseline;
-}
-@media screen and (min-width: 1025px)
-.new-grid-img {
-    padding: 0;
-}
-.artwork-thumbnail__container {
-    height: 100%;
 }
 
-.md-media {
-    display: block;
-    height: 0;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-}
-.md-media--1-1 {
-    padding-bottom: 100% !important;
-}
 .collectible-card {
     width: 100%;
+    min-width: 360px;
     margin-bottom: 48px;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-	margin: 0 auto;
+    padding-left: 24px ;
+    padding-right: 24px;
+	margin: 0 auto 2rem;
 }
 .collectible-card__info-container {
     display: flex;
@@ -89,12 +53,11 @@ audio, canvas, progress, video {
     width: 95%;
     margin-bottom: 15px;
 }
-@media screen and (min-width: 1025px)
-.collectible-card__name {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    padding-top: 0;
-}
+
+/* 
+    Card
+*/
+
 .collectible-card__name {
     margin-bottom: 0;
     font-size: 17px;
@@ -162,6 +125,11 @@ audio, canvas, progress, video {
     font-size: 12px;
     color: #9b9b9b;
 }
+
+/* 
+    User info
+*/
+
 .user {
     display: -ms-flexbox;
     display: flex;
@@ -225,7 +193,7 @@ audio, canvas, progress, video {
 .user__username, .user__username:hover {
     text-decoration: none;
 }
-.gmtmqV {
+.user-name {
     color: rgb(0, 0, 0);
     cursor: pointer;
     margin-left: 8px;
@@ -250,14 +218,81 @@ img.md-avatar-img {
     grid-column-start: 2;
 }
 
-@media screen (min-width: 768px){
+/* 
+    Media
+*/
+
+.new-grid-img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%!important;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+.new-grid-img video {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.md-media embed, .md-media iframe, .md-media img, .md-media object, .md-media svg, .md-media video {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.artwork-thumbnail__container {
+    height: 100%;
+}
+
+.md-media {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.md-media--1-1 {
+    padding-bottom: 100% !important;
+}
+
+
+/* 
+    Media Queries
+*/
+
+@media (min-width: 768px){
     .collectible-card{
         width: 50%;
     }
 }
 
-@media screen (max-width: 991px){
+@media (min-width: 991px){
     .collectible-card{
-        width: 33.3333333333333%;
+        width: 33.3333333%;
     }
+}
+
+@media screen and (min-width: 1025px){
+.new-grid-img video {
+    padding: 1px;
+}
+
+.new-grid-img {
+    padding: 0;
+}
+
+.collectible-card__name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-top: 0;
+
 }

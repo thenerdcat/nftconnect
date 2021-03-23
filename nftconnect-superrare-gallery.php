@@ -134,16 +134,15 @@ $options = [
 	 
 	//var_dump($resultscreations);
 			
-				
-	
 	  $count = 0;
+	$Content .= "<div class='collectible-collection'>";
 	 //print_r($urltokenid);
 	 if(!empty($a['url']) || !empty($content)){
 		 foreach($resultscreations as $resultc){
 			
 			 while($count < $resultc->totalCount ){
 	 	if ($resultc->collectibles[$count]->tokenId == $urltokenid ){
-	$Content .= "<div class='collectible-card col-sm-6 col-md-4'>";
+	$Content .= "<div class='collectible-card'>";
 			$urlcreation = 'https://superrare.co/artwork-v2/'.strtolower (preg_replace('/\s+/', '-', $resultc->collectibles[$count]->name)).'-'.$resultc->collectibles[$count]->tokenId;
 			$decideimage= (empty($resultc->collectibles[$count]->nftImage->imageVideoMedium)) ? "<div><img src='". $resultc->collectibles[$count]->nftImage->imageMedium ."'  class='new-grid-img' alt='".$resultc->collectibles[$count]->name." - ".$resultc->collectibles[$count]->description."'></img></div>" : "<div class='artwork-thumbnail__img new-grid-img' defaultmuted='true' style='width: 640px; height: 360px;'><video src='". $resultc->collectibles[$count]->nftImage->imageVideoMedium ."'preload='auto' autoplay='' loop='' playsinline='' webkit-playsinline='' x5-playsinline='' style='width: 100%; height: 100%;'></video></div>";
     $Content .= "<section class='md-media md-media--1-1'><a href='".$urlcreation."'>
@@ -154,7 +153,11 @@ $options = [
 					</div>
 					</a>
 				 </section>";
-	   $Content .= "<div class='collectible-card__info-container'><div class='collectible-card__first-section' style='width: 95%;'><a class='collectible-card__name' href='".$urlcreation."'>".$resultc->collectibles[$count]->name."</a></div>";  
+	   $Content .= "<div class='collectible-card__info-container'>
+	   					<div class='collectible-card__first-section' style='width: 95%;'>
+						   <a class='collectible-card__name' href='".$urlcreation."'>".$resultc->collectibles[$count]->name."
+						   </a>
+						</div>";  
 			$listprice = ($resultc->collectibles[$count]->hasSalePrice == false) ? "<span>-</span>":"<span>1</span><span class='eth-symbol' style='font-size: 15px;'>Ξ</span> ($<span>5,498</span>)";
 			//$Content .= "<div class='collectible-card__price-item-container'><div class='collectible-card__price-item'><a class='collectible-card__price-number' href='".$urlcreation."'><div style='overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'>".$listprice."</div></a><p class='collectible-card__price-text '>List price</p></div><div class='collectible-card__price-item'><a class='collectible-card__price-number' href='".$urlcreation."'><span>1</span><span class='eth-symbol' style='font-size: 15px;'>Ξ</span> ($1,459)</a><p class='collectible-card__price-text'>Last sale price</p></div></div>";
 			//			
@@ -170,7 +173,7 @@ $options = [
 														<div class='md-inline-block md-avatar md-avatar--default user__avatar'><img src='".$resultc->collectibles[$count]->creator->avatar."' role='presentation' class='md-avatar-img'>
 														</div>
 													</a>
-													<a class='sc-AxmLO gmtmqV' href='https://superrare.co/".$resultc->collectibles[$count]->creator->username."'>
+													<a class='user-name' href='https://superrare.co/".$resultc->collectibles[$count]->creator->username."'>
 														<span class='user__username'>".$resultc->collectibles[$count]->creator->username."</span>
 													</a>
 												</div>
@@ -184,7 +187,7 @@ $options = [
 															<img src='".$decideimageowner."' role='presentation' class='md-avatar-img'>
 														</div>
 													</a>
-													<a class='sc-AxmLO gmtmqV' href='https://superrare.co/".$resultc->collectibles[$count]->owner->username."'>
+													<a class='user-name' href='https://superrare.co/".$resultc->collectibles[$count]->owner->username."'>
 														<span class='user__username'>".$decideuserowner."</span>
 													</a>
 												</div>
@@ -200,7 +203,7 @@ $options = [
 	 }else{
 		 foreach($resultscreations as $resultc){
 		 while($count < $resultc->totalCount ){
-	 $Content .= "<div class='collectible-card col-sm-6 col-md-4'>";
+	 $Content .= "<div class='collectible-card'>";
 			$urlcreation = 'https://superrare.co/artwork-v2/'.strtolower (preg_replace('/\s+/', '-', $resultc->collectibles[$count]->name)).'-'.$resultc->collectibles[$count]->tokenId;
 			$decideimage= (empty($resultc->collectibles[$count]->nftImage->imageVideoMedium)) ? "<div><img src='". $resultc->collectibles[$count]->nftImage->imageMedium ."'  class='new-grid-img' alt='".$resultc->collectibles[$count]->name." - ".$resultc->collectibles[$count]->description."'></img></div>" : "<div class='artwork-thumbnail__img new-grid-img' defaultmuted='true' style='width: 640px; height: 360px;'><video src='". $resultc->collectibles[$count]->nftImage->imageVideoMedium ."'preload='auto' autoplay='' loop='' playsinline='' webkit-playsinline='' x5-playsinline='' style='width: 100%; height: 100%;'></video></div>";
     $Content .= "<section class='md-media md-media--1-1'><a href='".$urlcreation."'>
@@ -225,7 +228,7 @@ $options = [
 												<div class='user'><div class='user-container'>
 												<a class='avatar-container' href='https://superrare.com/".$resultc->collectibles[$count]->creator->username."'>
 													<div class='md-inline-block md-avatar md-avatar--default user__avatar'>
-														<img src='".$resultc->collectibles[$count]->creator->avatar."' role='presentation' class='md-avatar-img'></div></a><a class='sc-AxmLO gmtmqV' href='https://superrare.co/".$resultc->collectibles[$count]->creator->username."'>
+														<img src='".$resultc->collectibles[$count]->creator->avatar."' role='presentation' class='md-avatar-img'></div></a><a class='user-name' href='https://superrare.co/".$resultc->collectibles[$count]->creator->username."'>
 														<span class='user__username'>".$resultc->collectibles[$count]->creator->username."</span>
 												</a>
 													</div>
@@ -238,7 +241,7 @@ $options = [
 														<div class='md-inline-block md-avatar md-avatar--default user__avatar'><img src='".$decideimageowner."' role='presentation' class='md-avatar-img'>
 														</div>
 												</a>
-												<a class='sc-AxmLO gmtmqV' href='https://superrare.co/".$resultc->collectibles[$count]->owner->username."'>
+												<a class='user-name' href='https://superrare.co/".$resultc->collectibles[$count]->owner->username."'>
 													<span class='user__username'>".$decideuserowner."</span>
 												</a>
 												</div>
@@ -251,7 +254,7 @@ $options = [
 		 
 		 
 	 }}}
-	 
+	$Content .= "</div>";
 	$count = 0;
 	
     return $Content;
