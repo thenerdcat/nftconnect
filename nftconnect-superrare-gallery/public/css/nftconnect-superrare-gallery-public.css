@@ -290,4 +290,16 @@ hr.collectible-card__user-section-divider {
 }
 .collectible-card.col-sm-6.col-md-4 {
     width: 33.333333%;
+    min-width: 375px;
+}
+a.collectible-card__name {
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+}
+.collectible-card__user-title {
+    font-family: "DM Sans", sans-serif;
+}
+.user__username {
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none !important;
 }
